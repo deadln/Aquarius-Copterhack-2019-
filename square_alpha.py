@@ -1,12 +1,10 @@
 #import rospy
 import time
 from threading import Timer
+from point import Point
 
 
-class Point:
-    def __init__(self, x, y):
-        self.x = x;
-        self.y = y
+
 
 def navigate_wait(x, y, z, speed, frame_id, tolerance=0.2):
     navigate(x=x, y=y, z=z, speed=speed, frame_id=frame_id, update_frame=True, auto_arm=False)
